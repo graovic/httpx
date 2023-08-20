@@ -6,6 +6,7 @@ import (
 	"context"
 	"encoding/csv"
 	"encoding/json"
+	"log"
 	"fmt"
 	"html/template"
 	"io"
@@ -1866,6 +1867,7 @@ retry:
 	)
 	if scanopts.Screenshot {
 		var err error
+		log.Printf("this is screenshot ") 
 		screenshotBytes, headlessBody, err = r.browser.ScreenshotWithBody(fullURL, r.hp.Options.Timeout)
 		if err != nil {
 			gologger.Warning().Msgf("Could not take screenshot '%s': %s", fullURL, err)
