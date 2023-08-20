@@ -1,4 +1,4 @@
-module github.com/projectdiscovery/httpx
+module github.com/graovic/httpx
 
 go 1.20
 
